@@ -65,9 +65,10 @@
         }
         .information {
           opacity: 0;
-          margin-left: auto;
+          margin-right: auto;
           width: 350px;
           height: 330px;
+          left: 30px;
           h2 {
             @include text();
             font-family: Montserrat, sans-serif;
@@ -90,7 +91,7 @@
           transform: translateX(0);
         }
         .icon {
-          left: 10%;
+          left: 80%;
           transform: translate(-50%, -50%);
         }
         .information {
@@ -105,6 +106,17 @@
 @media screen and (max-width: 680px) {
   .accordion {
     height: auto;
+    ul li .sliderLink {
+      background: rgba(0, 0, 0, 0.4);
+      h2 {
+        transform: rotate(0deg);
+      }
+      * {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+      }
+    }
     ul li,
     ul li:hover,
     ul:hover li,
@@ -116,15 +128,9 @@
       -webkit-transition: none;
       transition: none;
     }
-    ul li div {
-      background: rgba(0, 0, 0, 0.4);
-      h2 {
-        transform: rotate(0deg);
-      }
-      * {
-        opacity: 1;
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
+    li:hover {
+      .icon {
+        opacity: 0;
       }
     }
   }
