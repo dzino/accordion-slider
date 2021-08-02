@@ -1,5 +1,5 @@
 @mixin text {
-  color: #fff;
+  color: rgb(235, 244, 255);
   text-overflow: clip;
   overflow: hidden;
   text-align: left;
@@ -36,7 +36,6 @@
       background-position: center center;
       transition: all 500ms ease-in-out;
       background-size: cover;
-      cursor: pointer;
       .sliderLink {
         display: block;
         overflow: hidden;
@@ -68,6 +67,24 @@
           left: 50%;
           transform: translate(-50%, -50%);
         }
+        .button {
+          opacity: 0;
+          cursor: pointer;
+          position: absolute;
+          bottom: 5%;
+          left: 30px;
+          transform: translate(0, -50%);
+
+          padding: 10px;
+          background-color: #00000000;
+          border-radius: 5px;
+          border: 3px solid rgb(235, 244, 255);
+
+          @include text();
+          font-family: Montserrat, sans-serif;
+          text-transform: uppercase;
+          font-size: 32px;
+        }
         .information {
           opacity: 0;
           margin-right: auto;
@@ -90,7 +107,7 @@
         }
       }
       &:hover {
-        width: 90%;
+        width: 40%;
         .sliderLink * {
           // -webkit-transform: translateX(0);
           // transform: translateX(0);
@@ -99,7 +116,8 @@
           left: 80%;
           transform: translate(-50%, -50%);
         }
-        .information {
+        .information,
+        .button {
           opacity: 1;
           // overflow: hidden;
         }
@@ -118,7 +136,8 @@
       * {
         opacity: 1;
       }
-      .information {
+      .information,
+      .button {
         left: 5px;
       }
     }

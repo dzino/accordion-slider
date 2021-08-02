@@ -7,5 +7,6 @@ export declare namespace General {
     header: string
     description: string
     image: string
+    link: string | null
   }
 }

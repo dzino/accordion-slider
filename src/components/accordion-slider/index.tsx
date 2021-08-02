@@ -20,6 +20,14 @@ export default function Slider(props: MyProps) {
           <h2>{slide.header}</h2>
           <p>{slide.description}</p>
         </div>
+        {slide.link ? (
+          <button
+            className="button"
+            onClick={() => window.open(slide.link || "")}
+          >
+            Look
+          </button>
+        ) : undefined}
       </div>
     </li>
   )
