@@ -1,7 +1,7 @@
 import * as Dec from "../declaration"
 import { SVG } from "./svg"
 
-import GitHub from "../images/github.png"
+import GitHub from "../images/github.jpg"
 import Play from "../images/play.jpeg"
 import UpWork from "../images/upwork.jpg"
 import Email from "../images/email.webp"
@@ -20,7 +20,7 @@ const slides: Dec.General.Slide[] = [
     icon: SVG(100, "#f73914").play,
     header: "Google Play",
     description:
-      "Check out some of my ready-made mobile projects on the google store!\n\nhttps://play.google.com\n/store/apps/developer?id=dzino",
+      "Check out some of my ready-made\nmobile projects on the google store!\n\nhttps://play.google.com\n/store/apps/developer?id=dzino",
     image: Play,
   },
   {

@@ -23,7 +23,7 @@
     &:hover li {
       width: 10%;
       &:hover .sliderLink {
-        background: rgba(0, 0, 0, 0.4);
+        background: rgba(0, 0, 0, 0.7);
       }
     }
     li {
@@ -42,6 +42,7 @@
         overflow: hidden;
         width: 100%;
 
+        background: rgba(0, 0, 0, 0.4);
         height: 360px;
         position: relative;
         z-index: 3;
@@ -111,12 +112,14 @@
   .accordion {
     height: auto;
     ul li .sliderLink {
-      background: rgba(0, 0, 0, 0.4);
       h2 {
         transform: rotate(0deg);
       }
       * {
         opacity: 1;
+      }
+      .information {
+        left: 5px;
       }
     }
     ul li,
