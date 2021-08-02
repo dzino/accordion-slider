@@ -1,5 +1,15 @@
+@mixin text {
+  color: #fff;
+  text-overflow: clip;
+  overflow: hidden;
+  text-align: left;
+  white-space: pre-line;
+  text-shadow: 1px 1px 2px #000;
+  // filter: invert(100%);
+  text-decoration: none;
+}
+
 .accordion {
-  text-align: center;
   width: 100%;
   height: 360px;
   overflow: hidden;
@@ -12,7 +22,7 @@
     padding: 0;
     &:hover li {
       width: 10%;
-      &:hover div {
+      &:hover .sliderLink {
         background: rgba(0, 0, 0, 0.4);
       }
     }
@@ -27,97 +37,70 @@
       transition: all 500ms ease-in-out;
       background-size: cover;
       cursor: pointer;
-      &:hover {
-        width: 90%;
-        div * {
-          opacity: 1;
-          -webkit-transform: translateX(0);
-          transform: translateX(0);
-          overflow: hidden;
-        }
-      }
-      div {
+      .sliderLink {
         display: block;
         overflow: hidden;
         width: 100%;
 
-        display: block;
         height: 360px;
-        width: 100%;
         position: relative;
         z-index: 3;
         vertical-align: bottom;
-        padding: 15px 20px;
         box-sizing: border-box;
-        color: #fff;
-        text-shadow: 1px 1px 2px #000;
-        // filter: invert(100%);
-        text-decoration: none;
-        font-family: Open Sans, sans-serif;
         transition: all 300ms ease-in-out;
         * {
-          opacity: 0;
           margin: 0;
-          width: 100%;
           text-overflow: ellipsis;
           position: relative;
           z-index: 5;
           white-space: nowrap;
-          -webkit-transform: translateX(-20px);
-          transform: translateX(-20px);
           -webkit-transition: all 400ms ease-in-out;
           //  transition: all 400ms ease-in-out;
         }
-        h2 {
-          opacity: 1;
-          transform: rotate(-90deg);
-          font-family: Montserrat, sans-serif;
-          text-overflow: clip;
-          font-size: 32px;
-          text-transform: uppercase;
-          margin-bottom: 2px;
-          top: 160px;
+        .icon {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
         }
-        p {
-          overflow: hidden;
-          top: 160px;
-          font-size: 18px;
-          padding-left: 1em;
+        .information {
+          opacity: 0;
+          margin-left: auto;
+          width: 350px;
+          height: 330px;
+          h2 {
+            @include text();
+            font-family: Montserrat, sans-serif;
+            text-transform: uppercase;
+            top: 20px;
+            font-size: 32px;
+          }
+          p {
+            @include text();
+            font-family: Open Sans, sans-serif;
+            top: 40px;
+            font-size: 18px;
+          }
+        }
+      }
+      &:hover {
+        width: 90%;
+        .sliderLink * {
+          -webkit-transform: translateX(0);
+          transform: translateX(0);
+        }
+        .icon {
+          left: 10%;
+          transform: translate(-50%, -50%);
+        }
+        .information {
+          opacity: 1;
+          // overflow: hidden;
         }
       }
     }
   }
 }
-
-// .accordion ul li:nth-child(1) {
-//   background-image: url("https://image.freepik.com/free-photo/the-beautiful-place-ha-long-bay_181624-19966.jpg");
-//   background-position: 50% 30%;
-// }
-
-// .accordion ul li:nth-child(2) {
-//   background-image: url("https://image.freepik.com/free-photo/morning-sun-light-rays-piercing-through-the-trees_97378-54.jpg");
-//   background-position: 70% 0%;
-// }
-
-// .accordion ul li:nth-child(3) {
-//   background-image: url("https://image.freepik.com/free-photo/the-shore-or-fallen-leaf-lake-and-its-still-water-with-beautiful-reflection-in-the-water_181624-423.jpg");
-//   background-position: 50% 50%;
-// }
-
-// .accordion ul li:nth-child(4) {
-//   background-image: url("https://image.freepik.com/free-photo/harbor-freight-blue-toned-images_1127-2863.jpg");
-//   background-position: 30% 40%;
-// }
-
-// .accordion ul li:nth-child(5) {
-//   background-image: url("https://image.freepik.com/free-vector/realistic-lightning-bolts-flashes-composition-with-images-of-clouds-in-night-sky-and-radiant-glowing-lightning-strokes_1284-28572.jpg");
-//   background-position: 60% 64%;
-// }
-
-// .accordion ul li:nth-child(6) {
-//   background-image: url("https://image.freepik.com/free-vector/realistic-lightning-bolts-flashes-composition-with-view-of-night-city-sky-with-clouds-and-thunderbolt-images_1284-28574.jpg");
-//   background-position: 70% 25%;
-// }
 
 @media screen and (max-width: 680px) {
   .accordion {

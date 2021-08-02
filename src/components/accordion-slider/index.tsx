@@ -1,23 +1,20 @@
 import React from "react"
 import "./styles.scss"
-
-interface Slide {
-  id: string
-  header: string
-  description: string
-  image: string
-}
+import * as Dec from "../../declaration"
 
 interface MyProps {
-  slides: Slide[]
+  slides: Dec.General.Slide[]
 }
 
 export default function Slider(props: MyProps) {
-  const getSlide = (slide: Slide) => (
+  const getSlide = (slide: Dec.General.Slide) => (
     <li key={slide.id} style={{ backgroundImage: `url(${slide.image})` }}>
       <div className="sliderLink">
-        <h2>{slide.header}</h2>
-        <p>{slide.description}</p>
+        <div className="icon">{slide.icon}</div>
+        <div className="information">
+          <h2>{slide.header}</h2>
+          <p>{slide.description}</p>
+        </div>
       </div>
     </li>
   )
