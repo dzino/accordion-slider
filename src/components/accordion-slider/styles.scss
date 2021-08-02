@@ -14,6 +14,24 @@
   height: 360px;
   overflow: hidden;
   margin: 0px auto;
+  position: relative;
+  .signature {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 3;
+
+    margin: 0;
+    padding: 5px 25px;
+    background-color: #000000;
+    border-radius: 5px 5px 0 0;
+    // border: 1px solid rgb(235, 244, 255);
+
+    @include text();
+    font-family: Montserrat, sans-serif;
+    font-size: 10px;
+  }
   ul {
     width: 100%;
     display: table;

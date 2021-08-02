@@ -35,6 +35,7 @@ export default function Slider(props: MyProps) {
   return (
     <div className="accordion">
       <ul>{props.slides.map((v) => getSlide(v))}</ul>
+      <p className="signature">https://codesandbox.io/u/dzino</p>
     </div>
   )
 }
