@@ -21,7 +21,7 @@ const slides = [
       "https://image.freepik.com/free-photo/the-shore-or-fallen-leaf-lake-and-its-still-water-with-beautiful-reflection-in-the-water_181624-423.jpg",
   },
   {
-    id: "2",
+    id: "3",
     header: "Email",
     description: "Hello world",
     image:
