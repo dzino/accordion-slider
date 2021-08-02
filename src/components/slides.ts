@@ -4,7 +4,7 @@ import { SVG } from "./svg"
 const slides: Dec.General.Slide[] = [
   {
     id: "0",
-    icon: SVG(100, "#f73914").temperature,
+    icon: SVG(100, "#000").gitHub,
     header: "GitHub",
     description: "Hello world",
     image:
@@ -12,7 +12,7 @@ const slides: Dec.General.Slide[] = [
   },
   {
     id: "1",
-    icon: SVG(100, "#f73914").temperature,
+    icon: SVG(100, "#f73914").play,
     header: "Google Play",
     description:
       "Hello world\nHello world\nHello world\nHello world\n\nHello world",
@@ -21,7 +21,7 @@ const slides: Dec.General.Slide[] = [
   },
   {
     id: "2",
-    icon: SVG(100, "#f73914").temperature,
+    icon: SVG(100, "#14a800").upWork,
     header: "Upwork",
     description:
       "Hello world\nHello world\nHello world\nHello world\nHello world",
@@ -30,7 +30,7 @@ const slides: Dec.General.Slide[] = [
   },
   {
     id: "3",
-    icon: SVG(100, "#f73914").temperature,
+    icon: SVG(100, "#f73914").mail,
     header: "Email",
     description: "Hello world",
     image:

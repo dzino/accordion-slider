@@ -58,6 +58,10 @@
           //  transition: all 400ms ease-in-out;
         }
         .icon {
+          background-color: rgb(235, 244, 255);
+          border-radius: 100%;
+          padding: 10px;
+
           position: absolute;
           top: 50%;
           left: 50%;
@@ -87,8 +91,8 @@
       &:hover {
         width: 90%;
         .sliderLink * {
-          -webkit-transform: translateX(0);
-          transform: translateX(0);
+          // -webkit-transform: translateX(0);
+          // transform: translateX(0);
         }
         .icon {
           left: 80%;
