@@ -1,40 +1,43 @@
 import * as Dec from "../declaration"
 import { SVG } from "./svg"
 
+import GitHub from "../images/github.png"
+import Play from "../images/play.jpeg"
+import UpWork from "../images/upwork.jpg"
+import Email from "../images/email.webp"
+
 const slides: Dec.General.Slide[] = [
   {
     id: "0",
     icon: SVG(100, "#000").gitHub,
     header: "GitHub",
-    description: "Hello world",
-    image:
-      "https://image.freepik.com/free-photo/the-beautiful-place-ha-long-bay_181624-19966.jpg",
+    description:
+      "Check out some of my work in the most popular code repository!\n\nhttps://github.com/dzino",
+    image: GitHub,
   },
   {
     id: "1",
     icon: SVG(100, "#f73914").play,
     header: "Google Play",
     description:
-      "Hello world\nHello world\nHello world\nHello world\n\nHello world",
-    image:
-      "https://image.freepik.com/free-photo/morning-sun-light-rays-piercing-through-the-trees_97378-54.jpg",
+      "Check out some of my ready-made mobile projects on the google store!\n\nhttps://play.google.com\n/store/apps/developer?id=dzino",
+    image: Play,
   },
   {
     id: "2",
     icon: SVG(100, "#14a800").upWork,
     header: "Upwork",
     description:
-      "Hello world\nHello world\nHello world\nHello world\nHello world",
-    image:
-      "https://image.freepik.com/free-photo/the-shore-or-fallen-leaf-lake-and-its-still-water-with-beautiful-reflection-in-the-water_181624-423.jpg",
+      "Check out my skills and offerings in the freelance market!\n\nhttps://www.upwork.com\n/freelancers/~0182a491d9b3506401",
+    image: UpWork,
   },
   {
     id: "3",
     icon: SVG(100, "#f73914").mail,
     header: "Email",
-    description: "Hello world",
-    image:
-      "https://image.freepik.com/free-photo/the-shore-or-fallen-leaf-lake-and-its-still-water-with-beautiful-reflection-in-the-water_181624-423.jpg",
+    description:
+      "Or write to me if you have any questions:\n\nmaksoku@gmail.com",
+    image: Email,
   },
 ]
 
