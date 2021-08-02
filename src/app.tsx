@@ -1,6 +1,6 @@
 import React from "react"
-import "./styles.scss"
-import Slides from "./slides"
+import "./components/styles.scss"
+import Slides from "./components/slides"
 import Slider from "./components/accordion-slider"
 
 export default function App() {
