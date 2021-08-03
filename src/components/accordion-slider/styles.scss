@@ -109,6 +109,9 @@ $height: 340px;
           &:active {
             background-color: rgb(235, 244, 255);
           }
+          &:focus {
+            outline: none;
+          }
         }
         .information {
           opacity: 0;
