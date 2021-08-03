@@ -19,6 +19,11 @@ export default function Slider(props: MyProps) {
         <div className="information">
           <h2>{slide.header}</h2>
           <p>{slide.description}</p>
+          {slide.link || slide.copy ? (
+            <div className="code">
+              <code>{slide.link || slide.copy}</code>
+            </div>
+          ) : undefined}
         </div>
         {slide.link ? (
           <button

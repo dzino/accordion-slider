@@ -1,3 +1,5 @@
+$height: 340px;
+
 @mixin text {
   color: rgb(235, 244, 255);
   text-overflow: clip;
@@ -11,7 +13,7 @@
 
 .accordion {
   width: 100%;
-  height: 360px;
+  height: $height;
   overflow: hidden;
   margin: 0px auto;
   position: relative;
@@ -49,7 +51,7 @@
       vertical-align: bottom;
       position: relative;
       width: 16.666%;
-      height: 360px;
+      height: $height;
       background-repeat: no-repeat;
       background-position: center center;
       transition: all 500ms ease-in-out;
@@ -60,7 +62,7 @@
         width: 100%;
 
         background: rgba(0, 0, 0, 0.4);
-        height: 360px;
+        height: $height;
         position: relative;
         z-index: 3;
         vertical-align: bottom;
@@ -111,9 +113,10 @@
         .information {
           opacity: 0;
           margin-right: auto;
-          width: 350px;
+          width: 330px;
           height: 330px;
           left: 30px;
+          text-align: left;
           h2 {
             @include text();
             font-family: Montserrat, sans-serif;
@@ -126,6 +129,17 @@
             font-family: Open Sans, sans-serif;
             top: 40px;
             font-size: 18px;
+          }
+          .code {
+            top: 60px;
+            background-color: rgba(235, 244, 255, 0.2);
+            padding: 5px;
+            code {
+              color: #f1ff12;
+              word-wrap: break-word;
+              white-space: pre-line;
+              font-size: 12px;
+            }
           }
         }
       }
