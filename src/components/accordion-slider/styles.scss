@@ -102,6 +102,11 @@
           font-family: Montserrat, sans-serif;
           text-transform: uppercase;
           font-size: 32px;
+
+          transition: all 0ms ease-in-out;
+          &:active {
+            background-color: rgb(235, 244, 255);
+          }
         }
         .information {
           opacity: 0;

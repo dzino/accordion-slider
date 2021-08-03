@@ -8,5 +8,6 @@ export declare namespace General {
     description: string
     image: string
     link: string | null
+    copy: string | null
   }
 }

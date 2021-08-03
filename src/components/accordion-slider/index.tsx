@@ -28,6 +28,14 @@ export default function Slider(props: MyProps) {
             Look
           </button>
         ) : undefined}
+        {slide.copy ? (
+          <button
+            className="button"
+            onClick={() => navigator.clipboard.writeText(slide.copy || "")}
+          >
+            Copy
+          </button>
+        ) : undefined}
       </div>
     </li>
   )
